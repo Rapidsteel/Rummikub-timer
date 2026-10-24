@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rummikub Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Game table</p>
+          <h1>Rummikub Timer</h1>
+        </div>
+        <div class="controls header-controls">
+          <button id="startPauseBtn" class="primary">Start</button>
+          <button id="resetBtn">Reset</button>
+        </div>
+      </header>
+
+      <section class="settings panel">
+        <label>
+          Turn duration (seconds)
+          <input id="turnDuration" type="number" min="5" max="300" value="30" />
+        </label>
+        <label>
+          Starting time per player (seconds)
+          <input id="startingTime" type="number" min="0" max="600" value="120" />
+        </label>
+        <button id="applySettingsBtn">Apply</button>
+      </section>
+
+      <section id="players" class="players" aria-live="polite"></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
